@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ResFinder</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string-array name="genre_arr">
+        <item>すべて</item>
+        <item>居酒屋</item>
+        <item>ダイニングバー・バル</item>
+        <item>創作料理</item>
+        <item>和食</item>
+        <item>洋食</item>
+        <item>イタリアン・フレンチ</item>
+        <item>中華</item>
+        <item>焼肉・ホルモン</item>
+        <item>韓国料理</item>
+        <item>アジア・エスニック料理</item>
+        <item>各国料理</item>
+        <item>カラオケ・パーティ</item>
+        <item>バー・カクテル</item>
+        <item>ラーメン</item>
+        <item>お好み焼き・もんじゃ</item>
+        <item>カフェ・スイーツ</item>
+        <item>その他グルメ</item>
+    </string-array>
+
+    <string-array name="range_arr">
+        <item>300m</item>
+        <item>500m</item>
+        <item>1000m</item>
+        <item>2000m</item>
+        <item>3000m</item>
+    </string-array>
+
+    <string name="list_fragment_top">検索結果一覧</string>
+    <string name="catch_">近くのレストランを一瞬で発見。</string>
+
+</resources>
