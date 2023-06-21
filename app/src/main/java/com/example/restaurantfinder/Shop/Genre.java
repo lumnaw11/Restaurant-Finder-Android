@@ -18,6 +18,10 @@ public class Genre implements Serializable {
 
     // Getters and setters
 
+    public String getGenreCatch() {
+        return genreCatch;
+    }
+
     public String getName() {
         return name;
     }

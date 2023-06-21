@@ -45,6 +45,10 @@ public class Shop implements Serializable {
     @Element(name = "budget_memo", required = false)
     private String budgetMemo;
 
+    public String getShopCatch() {
+        return shopCatch;
+    }
+
     @Element(name = "catch", required = false)
     private String shopCatch;
 

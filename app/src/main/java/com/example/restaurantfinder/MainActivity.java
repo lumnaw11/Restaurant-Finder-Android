@@ -143,9 +143,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             }
-
         }
-
     }
 
     @Override
@@ -187,20 +185,20 @@ public class MainActivity extends AppCompatActivity {
         Call<SearchResponse> call;
         if (genreIsSelected && edtSearch.getText().toString().equals("")){
             call = myApi.getShopsGenre(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, GENRE);
-            Log.i("call__", "1");
-            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+//            Log.i("call__", "1");
+//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else if (genreIsSelected && edtSearch.getText().toString().length() != 0 ) {
             call = myApi.getShopsKeywordAndGenre(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, GENRE, KEYWORD);
-            Log.i("call__", "2");
-            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+//            Log.i("call__", "2");
+//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else if (!genreIsSelected && edtSearch.getText().toString().length() != 0 ) {
             call = myApi.getShopsKeyword(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, KEYWORD);
-            Log.i("call__", "3");
-            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+//            Log.i("call__", "3");
+//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else {
             call = myApi.getShops(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT);
-            Log.i("call__", "4");
-            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+//            Log.i("call__", "4");
+//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         }
 
         // Perform the network request asynchronously

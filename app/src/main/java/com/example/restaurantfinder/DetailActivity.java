@@ -55,6 +55,9 @@ public class DetailActivity extends AppCompatActivity {
         TextView txtWifi = findViewById(R.id.txtWifi);
         txtWifi.setText("WiFi： " + shopItem.getWifi());
 
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView txtCatch = findViewById(R.id.txtCatch);
+        txtCatch.setText(shopItem.getGenre().getGenreCatch());
+
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView txtUrl = findViewById(id.txtUrl);
         txtUrl.setPaintFlags(txtLocation.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         txtUrl.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +69,7 @@ public class DetailActivity extends AppCompatActivity {
         });
 
         ImageView imgBanner = findViewById(R.id.imgResImage);
-        String imgUrl = shopItem.getPhotos().get(0).getMobile().getL();
+        String imgUrl = shopItem.getPhotos().get(0).getPc().getL();
 
         Glide.with(this).load(imgUrl).into(imgBanner);
 
