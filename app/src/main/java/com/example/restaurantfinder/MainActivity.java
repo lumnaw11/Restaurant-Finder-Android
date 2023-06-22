@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private double LONGITUDE = 139.839478;
     private static int RANGE = 1;
     private static final int ORDER = 3;
-    private static final int COUNT = 25;
+    private static final int COUNT = 40;
     private static String GENRE ="G004";
     private LocationManager locationManager;
     private LocationListener locationListener;
@@ -64,8 +64,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         edtSearch = findViewById(R.id.edtSearch);
-        //現在位置GPSで取得
 
+
+
+
+        //Get user current location
         locationManager = (LocationManager) getSystemService(MainActivity.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
@@ -160,7 +163,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -182,23 +184,25 @@ public class MainActivity extends AppCompatActivity {
         // Create an instance of the MyApi interface
         MyApi myApi = retrofit.create(MyApi.class);
 
+        KEYWORD = String.valueOf(edtSearch.getText());
+
         Call<SearchResponse> call;
         if (genreIsSelected && edtSearch.getText().toString().equals("")){
             call = myApi.getShopsGenre(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, GENRE);
-//            Log.i("call__", "1");
-//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+            Log.i("call__", "1");
+            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else if (genreIsSelected && edtSearch.getText().toString().length() != 0 ) {
             call = myApi.getShopsKeywordAndGenre(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, GENRE, KEYWORD);
-//            Log.i("call__", "2");
-//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+            Log.i("call__", "2");
+            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else if (!genreIsSelected && edtSearch.getText().toString().length() != 0 ) {
             call = myApi.getShopsKeyword(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT, KEYWORD);
-//            Log.i("call__", "3");
-//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+            Log.i("call__", "3");
+            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         } else {
             call = myApi.getShops(API_KEY, LATITUDE, LONGITUDE, RANGE, ORDER, COUNT);
-//            Log.i("call__", "4");
-//            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
+            Log.i("call__", "4");
+            Log.i("LOCATION", "lat: " + LATITUDE + "lng: " + LONGITUDE);
         }
 
         // Perform the network request asynchronously
