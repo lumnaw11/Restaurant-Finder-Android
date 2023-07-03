@@ -8,9 +8,9 @@
 
 ## Features | 機能
 <ul>
-<li>Search restaurants by keyword, genre, or distance. レストランをキーワード、ジャンル、距離から探す。</li>
-<li>View search results in a list or on Google Maps. 検索結果一覧をリストやマップで表示する。</li>
-<li>View details of restaurant on click. レストランの詳しい情報を見る。</li>
+<li>Search restaurants by keyword, genre, or distance. | レストランをキーワード、ジャンル、距離から探す。</li>
+<li>View search results in a list or on Google Maps.   | 検索結果一覧をリストやマップで表示する。</li>
+<li>View details of restaurant on click.               | レストランの詳しい情報を見る。</li>
 </ul>
 
 ## Environment/OS | 開発環境/0S
@@ -20,11 +20,9 @@
 </ul>
 
 ## Demo 
-| Search画面 | Result画面| Details画面 |
-|---------|---------|---------|
-| ![startscreen](https://user-images.githubusercontent.com/122884728/216902836-6b3f11aa-3d8a-495f-a729-3550de844cb7.png) | ![cardscreen](https://user-images.githubusercontent.com/122884728/216902863-ad0acd96-7712-41b9-bda5-d46dad68a4b3.png) |![AddCardScreen](https://user-images.githubusercontent.com/122884728/216902570-9e880a29-eaf3-4f2d-bb22-bb348ec76b30.png)|
-
-
+| Search画面 | Result画面(リスト）| Result画面(マップ） |　Details画面 |
+|---------|---------|---------|---------|
+|![search](https://github.com/lumnaw11/Restaurant-Finder-Android/assets/122884728/ae81b246-1c2c-42ef-b4d1-fd6a967c31cb)|![listView](https://github.com/lumnaw11/Restaurant-Finder-Android/assets/122884728/902e2b45-cd26-4b59-97ae-b839bea58ff1)|![mapView](https://github.com/lumnaw11/Restaurant-Finder-Android/assets/122884728/c0deb787-5e68-4db2-acbf-b9a918cd3410)|![details](https://github.com/lumnaw11/Restaurant-Finder-Android/assets/122884728/068a480a-16cb-41e5-a2a3-87caa7b8fdaf)|
 
 ## About Me
 Student currently studying iOS and Android development.
