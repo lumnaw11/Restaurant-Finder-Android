@@ -1,5 +1,6 @@
 # Restaurant-Finder-Android
 
+<b>ResFinder</b>
 <b>Simple Android app for searching restaurants near you (in Japan).</b>
 <p>I used Google Map SDK and HotPepper API. </br>
 近くのレストラン探す簡単なアンドロイドアプリです. Google Map SDK とホットペッパーAPI採用しました。
